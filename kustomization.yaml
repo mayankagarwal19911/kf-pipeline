@@ -1,0 +1,27 @@
+# First create namespace "kubeflow"
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - components/kubeflow
+  # # - components/jupyter, This is done via helm in deploy.sh. Below helm chart needs changes in terms of namespace
+  - components/training-operators/overlays/kubeflow
+  - components/katib #  Ensure cert-manager is installed on cluster
+  - components/kserve
+
+
+# helmGlobals:
+#   - chartHome: ./jupyterhub
+
+# helmGlobals:
+#   chartHome: components
+
+# helmCharts:
+# - releaseName: jupyter
+#   name: jupyter
+#   version: 3.0.3
+#   valuesFile: components/jupyter/values.yaml
+#   namespace: jupyter
+#   includeCRDs: true
+
+# kubectl kustomize --enable-helm | kubectl apply
