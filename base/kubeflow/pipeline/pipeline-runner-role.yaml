@@ -84,3 +84,9 @@ rules:
   - inferenceservices
   verbs:
   - '*'
+- apiGroups:
+  - serving.kserve.org
+  resources:
+  - inferenceservices
+  verbs:
+  - '*'
