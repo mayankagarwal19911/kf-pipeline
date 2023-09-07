@@ -74,3 +74,9 @@ curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1
 You should see the similar output
 
 ![My Remote Image](http://letslearnsomething.today/wp-content/uploads/2023/09/Screenshot-2023-09-06-at-19.15.25.png)
+
+# Test Early stop
+1. Run /example/median-early-stop.yaml 
+2. Validate the early stopping in katib UI
+
+![My Remote Image](http://letslearnsomething.today/wp-content/uploads/2023/09/Screenshot-2023-09-07-at-13.12.36.png)
