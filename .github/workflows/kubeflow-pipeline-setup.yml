@@ -38,6 +38,7 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |-
+          kubectl version
           gcloud container clusters get-credentials to-del --zone us-central1-c --project burner-mayagarw-02
           cd components/katib
           kubectl apply -k .
