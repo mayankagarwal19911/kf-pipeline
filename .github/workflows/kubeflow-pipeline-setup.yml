@@ -6,7 +6,7 @@ on:
     
 env:
   PROJECT_ID: burner-mayagarw-02
-  GAR_LOCATION: us-central1
+  GKE_LOCATION: us-central1
   GKE_CLUSTER: cluster-1
   GKE_ZONE: us-central1-a
 
@@ -40,7 +40,7 @@ jobs:
       uses: google-github-actions/get-gke-credentials@v0
       with:
         cluster_name: ${{ env.GKE_CLUSTER }}
-        location: ${{ env.GKE_ZONE }}
+        location: ${{ env.GKE_LOCATION }}
 
     # Set up kubectl
     - name: Set up Kubectl
