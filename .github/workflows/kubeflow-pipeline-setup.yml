@@ -26,7 +26,7 @@ jobs:
         token_format: access_token
         access_token_lifetime: 900s
         create_credentials_file: true
-        workload_identity_provider: 'projects/141066722035/locations/global/workloadIdentityPools/abfhwjf82sds82828/providers/ghaction'
+        workload_identity_provider: 'projects/141066722035/locations/global/workloadIdentityPools/k8s-pool/providers/k8s-provider'
         service_account: 'kubeflow-oidc@burner-mayagarw-02.iam.gserviceaccount.com'
 
 
