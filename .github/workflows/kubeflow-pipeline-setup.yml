@@ -39,4 +39,6 @@ jobs:
     - name: Deploy
       run: |-
           gcloud container clusters get-credentials to-del --zone us-central1-c --project burner-mayagarw-02
+          cd components/katib
+          kubectl apply -k .
 
